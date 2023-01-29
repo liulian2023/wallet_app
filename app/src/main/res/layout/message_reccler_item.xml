@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/message_date_tv"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#F5F5F5"
+        android:textSize="12sp"
+        android:textColor="#999999"
+        android:gravity="center"
+        android:text="2021-01-01  09:23"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/white_8_radio_shape">
+
+        <TextView
+            android:id="@+id/message_title_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="10dp"
+            android:text="标题"
+            android:textColor="#333333"
+            android:singleLine="true"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toStartOf="@+id/unread_tv"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/message_complete_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="完善需求>"
+            android:textColor="#0391FF"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/message_title_tv"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/message_title_tv" />
+
+        <TextView
+            android:id="@+id/message_content_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="12dp"
+            android:text="百万福利庆元旦！！！元旦礼盒可以开出手机、金条、金钥匙、熊猫金币等实物奖励（纯黄金哦）机会不容错过！新用户送58元，1元投注，需"
+            android:textColor="#333333"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/message_title_tv" />
+
+        <TextView
+            android:id="@+id/unread_tv"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/un_read_message_shape"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/message_title_tv"
+            app:layout_constraintEnd_toEndOf="@+id/message_content_tv"
+            app:layout_constraintTop_toTopOf="@+id/message_title_tv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

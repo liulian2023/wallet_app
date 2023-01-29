@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".ui.activity.mine_fragment_activity.mine_history_activity.MineHistoryActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/toolbar_layout"/>
+        <com.androidkun.xtablayout.XTabLayout
+            android:id="@+id/mine_history_tab"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            app:xTabIndicatorColor="#FEBD00"
+            app:xTabIndicatorWidth="70dp"
+            app:xTabIndicatorHeight="3dp"
+            android:background="@color/white"
+            app:xTabTextSize="12sp"
+            app:xTabSelectedTextColor="@color/default_color"
+            app:xTabTextColor="@color/default_color" />
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/mine_history_viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/history_bottom_linear"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:layout_gravity="bottom">
+        <TextView
+            android:id="@+id/choose_all_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="选择全部历史"
+            android:textColor="#FE450F"
+            android:textSize="14sp"
+            android:background="@drawable/white_normal_ripple"
+            android:gravity="center"
+            />
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="23dp"
+            android:background="#D9D9D9"
+            />
+        <TextView
+            android:id="@+id/delete_choosed_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="删除所选(0)"
+            android:textColor="#FE450F"
+            android:textSize="14sp"
+            android:background="@drawable/white_normal_ripple"
+            android:gravity="center"
+            />
+    </LinearLayout>
+</FrameLayout>

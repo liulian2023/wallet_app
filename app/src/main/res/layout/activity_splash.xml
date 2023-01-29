@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.main_tab_activity.SplashActivity">
+    <ImageView
+        android:id="@+id/splash_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        />
+    <include layout="@layout/error_lyaout"/>
+    <LinearLayout
+        android:id="@+id/skip_linear"
+        android:layout_width="100dp"
+        android:layout_height="58dp"
+        android:visibility="gone"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="@dimen/dp_40"
+        android:layout_marginRight="10dp"
+        android:gravity="center|right|top">
+
+        <TextView
+            android:id="@+id/skip_tv"
+            android:layout_width="60dp"
+            android:layout_height="28dp"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:textColor="@color/white"
+            android:background="@drawable/bkg_live_tracorner50"
+            android:text="- - - " />
+    </LinearLayout>
+</FrameLayout>

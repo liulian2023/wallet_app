@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/contact_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="Telegram:"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/contact_now_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/contact_now_btn" />
+
+    <TextView
+        android:id="@+id/contact_value_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:text="121212"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/contact_now_btn"
+        app:layout_constraintStart_toEndOf="@+id/contact_name_tv"
+        app:layout_constraintTop_toTopOf="@+id/contact_now_btn" />
+    <Button
+        android:id="@+id/copy_contact_btn"
+        android:layout_width="70dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/copy_contact_btn_shape"
+        android:gravity="center"
+        android:text="复制账号"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/contact_now_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/contact_now_btn" />
+
+    <Button
+        android:id="@+id/contact_now_btn"
+        android:layout_width="70dp"
+        android:layout_height="26dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="19dp"
+        android:background="@drawable/contact_now_selector"
+        android:gravity="center"
+        android:text="立即联系"
+        android:textColor="#2B86FF"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/copy_contact_btn"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

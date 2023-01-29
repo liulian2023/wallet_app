@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    tools:context=".ui.activity.home_activity.HonestyMerchantActivity">
+    <include layout="@layout/toolbar_layout"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="#FFE6D5"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/cxsj_sm"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#FA6400"
+            android:text="官方认证"
+            android:layout_gravity="center"
+            />
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/cxsj_sm"
+            android:layout_gravity="center"
+            android:layout_marginLeft="22dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#FA6400"
+            android:text="甄选行业优质服务商"
+            android:layout_gravity="center"
+            />
+        <ImageView
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:src="@drawable/cxsj_sm"
+            android:layout_gravity="center"
+            android:layout_marginLeft="22dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textColor="#FA6400"
+            android:text="品质级客户安心首选"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+    <include layout="@layout/loading_layout"/>
+    <include layout="@layout/nodata_layout"/>
+    <include layout="@layout/error_lyaout"/>
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/honesty_merchant_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="12dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/honesty_merchant_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

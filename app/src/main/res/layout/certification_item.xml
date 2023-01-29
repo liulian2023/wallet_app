@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    >
+
+    <TextView
+        android:id="@+id/certification_title_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:text="1. 平均收入有多少？"
+        android:layout_marginRight="12dp"
+        android:textColor="@color/default_color"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toStartOf="@+id/certification_item_iv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/certification_item_iv"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_marginEnd="15dp"
+        app:layout_constraintBottom_toBottomOf="@+id/certification_title_tv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/certification_title_tv"
+        app:srcCompat="@drawable/cjwt_shang_fwsrz" />
+
+    <TextView
+        android:id="@+id/certification_item_content_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="回答内容，中国地震台网正式测定：07月14日23时36分在四川阿坝州汶川县（北纬30.97度，东经103.37度）发生4.8级地震，震源深度15千中国地震台网正式测定：07月14日23时36分在四川阿坝州汶川县（北纬30.97度，东经103.37度）发生4.8级地震，震源深度15千。"
+        android:textSize="13sp"
+        android:textColor="#666666"
+        app:layout_constraintEnd_toEndOf="@+id/certification_item_iv"
+        app:layout_constraintStart_toStartOf="@+id/certification_title_tv"
+        app:layout_constraintTop_toBottomOf="@+id/certification_title_tv" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="14dp"
+        android:background="#D8D8D8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/certification_item_content_tv" />
+</androidx.constraintlayout.widget.ConstraintLayout>

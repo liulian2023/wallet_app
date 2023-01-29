@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".ui.fragment.main_tab_fragment.ClassificationFragment">
+
+    <LinearLayout
+        android:id="@+id/classification_search_linear"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/classification_search_linear_shape"
+        android:layout_marginLeft="22sp"
+        android:layout_marginRight="22dp">
+        <ImageView
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:src="@drawable/fenlei_ss_icon"
+            android:layout_gravity="center"
+            android:layout_marginLeft="12dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="4dp"
+            android:text="搜索您想找的需求,比如支付信息"
+            android:textSize="12sp"
+            android:textColor="#939393"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="01dp"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_marginTop="7dp">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/classification_recycler"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/classification_banner_linear"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginLeft="10dp"
+
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="12dp">
+                <com.zhpan.bannerview.BannerViewPager
+                    android:id="@+id/classification_fragment_banner"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+            <com.scwang.smartrefresh.layout.SmartRefreshLayout
+                android:id="@+id/two_classification_refresh"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/two_classification_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    />
+            </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>

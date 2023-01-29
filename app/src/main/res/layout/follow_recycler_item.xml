@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    android:orientation="vertical"
+    android:id="@+id/follow_wrap_linear"
+    android:background="@drawable/white_4_radio_shape">
+    <com.example.new_application.utils.SlideLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/follow_wrap_slideLayout">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/show_constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/white_normal_ripple">
+
+            <ImageView
+                android:id="@+id/jingxuan_iv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_goneMarginLeft="9dp"
+                app:srcCompat="@drawable/x_icon" />
+            <TextView
+                android:id="@+id/two_level_name_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:gravity="center"
+                android:text="[二级分类]"
+                android:textColor="@color/default_color"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/jingxuan_iv"
+                app:layout_constraintStart_toEndOf="@+id/jingxuan_iv"
+                app:layout_constraintTop_toTopOf="@+id/jingxuan_iv" />
+
+            <TextView
+                android:id="@+id/follow_title_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="12dp"
+                android:gravity="left"
+                android:text="标题，标题，它还是个标题!"
+                android:textColor="@color/default_color"
+                android:textSize="14sp"
+                android:singleLine="true"
+                app:layout_constraintEnd_toStartOf="@+id/price_tv"
+                app:layout_constraintStart_toEndOf="@+id/two_level_name_tv"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/follow_remark_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="9dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="12dp"
+                android:lineSpacingExtra="3dp"
+                android:maxLines="2"
+                android:text="已有竖版PPT内容约20页，需设计美化。重点优化、美化数据图表、案例展示、软件产品展示，增加…"
+                android:textColor="#666666"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/follow_title_tv" />
+            <TextView
+                android:id="@+id/price_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="9dp"
+                android:text="2000"
+                android:textColor="@color/red"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:id="@+id/slide_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:minHeight="88dp"
+            android:maxHeight="103dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/follow_share_tv"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:background="#FFB81C"
+                android:text="分享"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/follow_delete_tv"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:background="#F54F4F"
+                android:text="取消收藏"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </com.example.new_application.utils.SlideLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/follow_child_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="9dp"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/textView46"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#f8f8f8"
+        android:layout_marginLeft="9dp"
+        android:layout_marginRight="9dp"
+        />
+
+    <TextView
+        android:id="@+id/date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="9dp"
+        android:text="时间"
+        android:textColor="#999999"
+        android:textSize="12sp" />
+</LinearLayout>

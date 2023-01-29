@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SlideLayout">
+        <attr name="slideDirection">
+            <enum name="fromRight" value="0"/>
+            <enum name="fromLeft" value="1"/>
+            <enum name="fromTop" value="2"/>
+            <enum name="fromBottom" value="3"/>
+        </attr>
+
+        <attr name="slideCriticalValue" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="TagFlowLayout">
+        <attr name="auto_select_effect" format="boolean"></attr>
+        <attr name="max_select" format="integer"></attr>
+        <attr name="gravity">
+            <enum name="left" value="-1" />
+            <enum name="center" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>

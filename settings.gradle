@@ -1,0 +1,3 @@
+include ':rxhttp'
+include ':app'
+rootProject.name = "new_application"

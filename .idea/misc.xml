@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/drawable-xxhdpi/background_address_bar.xml" value="0.1284722222222222" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/drawable-xxhdpi/background_horizontal_progress.xml" value="0.1284722222222222" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/drawable/agreement_circle_cb_selector.xml" value="0.1" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/drawable/background_marketplace_event_select.xml" value="0.1" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/drawable/background_round_grey.xml" value="0.1" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/drawable/create_wallet_disenabled_btn_bg_shape.xml" value="0.1" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/drawable/etc_transfer_hex_data_et_shape.xml" value="0.1" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/drawable/home_search_linear_shape.xml" value="0.17430555555555555" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/drawable/mine_header_bg_shape.xml" value="0.1" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/drawable/selector_settings_item_reverse.xml" value="0.1" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/drawable/wallet_manager_list_item_bg.xml" value="0.1" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/drawable/white_2_store_shape.xml" value="0.20234375" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/drawable/white_4_radio_shape.xml" value="0.20234375" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/drawable/white_8_radio_shape.xml" value="0.20234375" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/drawable/white_8radio_rapple.xml" value="0.20234375" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/drawable/white_normal_ripple.xml" value="0.17430555555555555" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout-w1240dp/content_scrolling.xml" value="0.13120567375886524" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/activity_add_token.xml" value="0.1" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/activity_asset_management.xml" value="0.1" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/activity_confirm.xml" value="0.1" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/activity_create_wallet.xml" value="0.1" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/activity_gathering_qrcode.xml" value="0.17418032786885246" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/activity_property_detail.xml" value="0.128099173553719" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/activity_scrolling.xml" value="0.144" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/activity_send.xml" value="0.10860655737704918" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/activity_wallet_manager.xml" value="0.1" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/add_token_item_layout.xml" value="0.1" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/asset_management_item_layout.xml" value="0.2" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/common_toolbar.xml" value="0.12568306010928962" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/content_scrolling.xml" value="0.12568306010928962" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/dialog_awallet_alert.xml" value="0.12" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/dialog_sign_message.xml" value="0.144" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/fragment_coin.xml" value="0.1" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/fragment_webview.xml" value="0.1" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/item_autocomplete_url.xml" value="0.1" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/layout_confrim_transcation.xml" value="0.10860655737704918" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/layout_gas_settings.xml" value="0.16666666666666666" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/layout_input_password.xml" value="0.10860655737704918" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/layout_right_menu.xml" value="0.16666666666666666" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/list_item_property.xml" value="0.2" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/list_item_wallet_manager.xml" value="0.1" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/qr_scanner_toolsbar.xml" value="0.1" />
+        <entry key="..\:/ANDROID/wallet_app/app/src/main/res/layout/split_horizontal.xml" value="0.14617486338797814" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

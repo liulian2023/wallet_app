@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/classification_child_wrap_linear"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <ImageView
+        android:id="@+id/classification_child_iv"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/ic_launch"
+        android:layout_gravity="center"
+        />
+    <TextView
+        android:id="@+id/classification_child_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textSize="11sp"
+        android:textColor="@color/default_color"
+        android:text="@string/classification"
+        android:layout_gravity="center"
+        />
+    <TextView
+        android:id="@+id/classification_child_num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_marginTop="8dp"
+        android:paddingRight="7dp"
+        android:paddingLeft="7dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:textColor="#999999"
+        android:layout_gravity="center"
+        android:text="@string/classification"
+        android:background="@drawable/classification_num_uncheck_shape"
+        android:layout_marginBottom="19dp"
+        />
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/help_parent_linear"
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@drawable/white_normal_ripple"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/help_parent_iv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="12dp"
+            android:layout_gravity="center"
+            android:src="@drawable/jywt_icon"
+            />
+        <TextView
+            android:id="@+id/help_center_parent_name_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="6dp"
+            android:textSize="13sp"
+            android:textColor="@color/default_color"
+            android:layout_gravity="center"
+            />
+        <ImageView
+            android:id="@+id/tip_iv"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginRight="14dp"
+            android:src="@drawable/sxfw_arrow_down"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+    <include layout="@layout/split_horizontal"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/help_center_child_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/classification_item_linear"
+    android:layout_width="80dp"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/classification_item_name_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="大类名称"
+        android:textColor="#FFB300"
+        android:textSize="14sp"
+        android:layout_marginTop="13dp"
+        />
+    <TextView
+        android:id="@+id/classification_item_num_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="21"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:textColor="#FFB300"
+        android:layout_marginTop="7dp"
+        android:layout_marginBottom="13dp"
+        />
+</LinearLayout>

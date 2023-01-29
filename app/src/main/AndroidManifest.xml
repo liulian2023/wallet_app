@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.new_application">
+
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".utils.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_config"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/NoActionBarNoTitleTheme"
+        tools:replace="android:networkSecurityConfig,android:icon,android:theme">
+        <activity
+            android:name=".ui.activity.home_activity.PropertyDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.home_activity.SendActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.home_activity.AssetManagementActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.home_activity.AddTokenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activity.main_tab_activity.SplashActivity"
+            android:theme="@style/StartingWindowTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activity.CreateWalletActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".ui.activity.home_activity.QRCodeScannerActivity" />
+        <activity android:name=".ui.activity.home_activity.GatheringQRCodeActivity"/>
+        <activity android:name=".ui.activity.home_activity.WalletMangerActivity"/>
+        <activity android:name=".ui.activity.dapp_activity.ConfirmationActivity"/>
+        <meta-data
+            android:name="com.taobao.android.hotfix.IDSECRET"
+            android:value="333532927-1" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.APPSECRET"
+            android:value="0833468449c248a8af07fe78d123b7a2" />
+        <meta-data
+            android:name="com.taobao.android.hotfix.RSASECRET"
+            android:value="MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDBchyXpL9QY3TFf248RaXajg/CDPmGSvNDpsFbRmixsvVEvVMspDemHD7PssE5OWKeNvnLvm+Cd8BzGKqfFZNNtEZtKZZ8Y+JpfBkYJXEIWn+kTASjc6SCrU7rI1ty8HpvZDAxFQZDD5hoQpHUWC9jwg/ipevR7UgN0ZPAZjYz1Uf+1VgKU+UorsEwbdNFGdxknDqAmRrAj7PYjdA1mvWDZWCnZjcpllBI8VwqauQvhpcpdBgL7/H2iFl54UzPdZNSZykX0LqLwgZ8+r51dkDlzxnl0ny242NS2uwxJ+0l+il2RGr9g5rhe/smm7AZNXf3eeLUnHPb7q4gefZ7ve+pAgMBAAECggEAFyWyairagaIE/QTsieXDnM1W8V9gFEOvrC6uAGACcxD47ErDQxo7VnMWyP+Yw2IsfMYTSd/1s+TkcGFJOVP5lli1/KX3Tdcd5oVk81C3n8pEb8Jw46YYz1IxmU1Xyf8gh2ezpIvhffDFyeP9Uy1iLkuwXux/tVTxREYJqgIRBk6PWcKqWhA0olGLzbwl/yritW5S+3/3gbaNWaKT8eYmcNk1EHyORsL9YUIGpn9DVFnwahIW/dY+eBDe391REbcR0co0EDh4OnYYJpzJANNSHGsoJHmzS6Chcl7/zdPQqn2enBSHq90IDBbicMTemApkJ2F+ZjiFOWPxFCKFo9bbIQKBgQD+0qrrbOv+Ee2MyzPt9P7zjJ6eXokKmfTcCnDwbMRvyB+Sih/UmUIb9xPqdOutxE+1kxD24EZG6hRnaNmdNe8OYRgUlZA4vYnI927iGf2Pwjw9RIS4Oj1zBrHduLtJAh6Df5DnvWLA+3l86FNzS74Y8P3Tq3gbLE0eZ3EmSSia7QKBgQDCVt1QUhviC2Nx6+t96q6Id1Qa3Zu/66WECFp0sbjvZw+NbCgyRZiwOynmsMyFXcnjWZYWAini/dmBWlgG26i/Ba2weLPLKReTWq+WLxBk463flIMd0yi+YjayQTOxUY0iakqqegRjS9S1OnPfJdYI2cXX72VkklfmS0u+CQsELQKBgDcXot5dYTQ/+gTblfGXa1uKhmyk8an6GSdNlpdUXK/yK2lKNZGIRPO42nRxLNcXv0f5cMx/NpJ0X07wK0RC+dk5ArTIlTK/P7/URwPZLKndC5sPakZOSSTKSMAwBUXGkIRLmy+PEX+5ns1ziT8/G+1WhPozczckv9OX962YWZANAoGAHQxm4E6lpFAXeTvOY2/kzrkndSySz0kl4GpvOuolvoMlK/pyt7D3dcAiLz1WFMlEGBuX94ozQJ65GECsz7mdq4/pumsQVNm7kGcJv+UhCjOOFdFZF+gsOujrTBG67FJISlChAIJkjYMUNFKcZ0p8h64liHVcLoBBa0bt92Xao7ECgYEAi97tQ9CF+0x3HH+8FoUhrNzjKGlIswokRpuCziOg0Fb4gf1ERawbjZFcDu5LsjRmDxcAC5HRQhXOBe2zuSQxXQaAK3x+T8smrkHBY0ORD2xOXeeK4dS/4ejsu3kj0G6m77iyBaMnwDcGTVMB3ikXUBULXT65ayelCAId/ntWjhE=" />
+    </application>
+
+</manifest>

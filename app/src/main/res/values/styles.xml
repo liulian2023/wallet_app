@@ -1,0 +1,174 @@
+<resources>
+    <!-- 自定义loading dialog -->
+    <style name="loading_dialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="BottomSheetDialog" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+    </style>
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="behavior_peekHeight">500dp</item>
+    </style>
+    <!--自定义AppTheme-->
+    <style name="NoActionBarNoTitleTheme" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="colorControlNormal">@color/white</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/transparent</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="toolbarStyle">@style/ClubToolbar</item>
+    </style>
+    <style name="RightTop2PopAnim" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/right_top_in_2</item>
+        <item name="android:windowExitAnimation">@anim/right_top_out_2</item>
+    </style>
+
+    <!--横向进度条样式-->
+    <style name="progressHorizontalStyle" parent="Widget.AppCompat.ProgressBar.Horizontal">
+        <item name="android:maxHeight">5dip</item>
+        <item name="android:minHeight">5dip</item>
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:indeterminateDrawable">
+            @android:drawable/progress_indeterminate_horizontal
+        </item>
+        <item name="android:progressDrawable">@drawable/progressbar_color_size</item>
+    </style>
+
+
+    <style name="down_to_up150" parent="android:Animation">//从下往上150动画
+        <item name="android:windowEnterAnimation">@anim/down_to_up_in_150</item>//从下往上动画
+        <item name="android:windowExitAnimation">@anim/down_to_up_out_150</item>
+
+    </style>
+
+    <style name="up_to_down_150" parent="android:Animation">//从上往下150动画
+        <item name="android:windowEnterAnimation">@anim/up_to_down_in_150</item>//从上往下150动画
+        <item name="android:windowExitAnimation">@anim/up_to_down_out_150</item>
+
+    </style>
+
+    <style name="popAlphaanim0.3" parent="android:Animation">//透明0.3秒动画
+        <!--<item name="android:windowEnterAnimation">@anim/pop_in_500</item>//从下往上动画-->
+        <item name="android:windowEnterAnimation">@anim/alphaanim_in_300</item>//透明度动画
+        <!--<item name="android:windowEnterAnimation">@anim/scaleanim</item>-->//缩放动画
+        <!--<item name="android:windowExitAnimation">@anim/alphaanim_out_500</item>-->
+        <item name="android:windowExitAnimation">@anim/alphaanim_out_300</item>
+    </style>
+
+    <!--pop中间弹出动画-->
+    <style name="pop_scale_animation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/scale_pop_in</item>
+        <item name="android:windowExitAnimation">@anim/scale_pop_out</item>
+    </style>
+
+
+    <style name="MainDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:background">@null</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <style name="ClubToolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="contentInsetStart">0dp</item><!-- 设置该属性解决空白部分-->
+    </style>
+
+
+    <style name="LoginEditText" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">#D8D8D8</item>
+        <item name="colorControlActivated">@android:color/holo_orange_dark</item>
+    </style>
+    <!--支持圆角的TextView-->
+    <declare-styleable name="RoundTextView">
+        <attr name="rtvBgColor" format="color"/>
+        <attr name="rtvBorderWidth" format="dimension"/>
+        <attr name="rtvBorderColor" format="dimension"/>
+        <attr name="rtvRadius" format="dimension"/>
+    </declare-styleable>
+
+    <!--自定义圆角,背景textView的资源文件-->
+    <declare-styleable name="MyCornerTextView">
+        <attr name="borderWid" format="dimension"/>
+        <attr name="borderWidthColor" format="color"/>
+        <attr name="cornersize" format="dimension"/>
+        <!--<attr name="titleText" format="string" />-->
+        <!--<attr name="mbackground" format="color"/>-->
+        <!--<attr name="titleTextSize" format="dimension"/>-->
+        <!--<attr name="titleTextColor" format="color"/>-->
+        <!-- 1:边框的宽度 2：边框的颜色   3：边角的大小    4:控件内容   5:背景颜色   6;字体大小   7:  字体颜色  -->
+
+    </declare-styleable>
+
+    <!--progressDialog style-->
+    <style name="CustomProgressDialog" parent="@android:style/Theme.Dialog">
+        <!-- Dialog的windowFrame框为无 -->
+        <item name="android:windowFrame">@null</item>
+        <!-- 是否浮现在activity之上 -->
+        <item name="android:windowIsFloating">true</item>
+        <!-- 是否半透明 -->
+        <item name="android:windowIsTranslucent">true</item>
+        <!-- 是否显示title -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- 设置dialog的背景 -->
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!-- 用来控制灰度的值，当为1时，界面除了我们的dialog内容是高亮显示的，dialog以外的区域是黑色的，完全看不到其他内容，系统的默认值是0.5 -->
+        <item name="android:backgroundDimAmount">0.2</item>
+        <!-- 是否模糊 -->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+    <!-- 应用启动页(StartingWindow)的theme -->
+    <style name="StartingWindowTheme" parent="NoActionBarNoTitleTheme">    </style>
+    <style name="Theme.ToolBar.Menu" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- 设置-弹窗的背景-颜色-->
+        <item name="android:colorBackground">@color/common_bg</item>
+        <!-- 字体的颜色-->
+        <item name="android:textColor">@color/common_h1</item>
+        <!-- 字体大小-->
+        <item name="android:textSize">16sp</item>
+        <!-- 用于替换菜单的三个小白点，换成自已的图片-->
+        <item name="actionOverflowButtonStyle">@style/ActionButton.Overflow.Menu</item>
+        <!--用于控制menu弹出的位置，位于toolbar的下面，而不是上面-->
+        <item name="actionOverflowMenuStyle">@style/OverflowMenuStyle</item>
+        <!-- 用于修改item默认的分割线-->
+            <item name="android:dropDownListViewStyle">@style/dropDownStyle</item>
+        <item name="dropDownListViewStyle">@style/dropDownStyle</item>
+    </style>
+
+    <style name="ActionButton.Overflow.Menu" parent="android:style/Widget.Holo.Light.ActionButton.Overflow">
+        <item name="android:src">@drawable/ic_moreoverflow_mtrl_alpha</item>
+    </style>
+
+    <!--把该属性改为false即可使menu位置位于toolbar之下-->
+    <style name="OverflowMenuStyle" parent="Widget.AppCompat.Light.PopupMenu.Overflow">
+        <item name="overlapAnchor">false</item>
+    </style>
+
+    <!--用于修改popmenu的分割线-->
+    <style name="dropDownStyle" parent="android:style/Widget.Holo.ListView.DropDown">
+        <item name="android:listSelector">@drawable/touch_bg</item>
+        <item name="android:divider">@color/common_divider_narrow</item>
+        <item name="android:dividerHeight">0.5dp</item>
+    </style>
+
+    <style name="AppTheme.Toolbar" parent="ThemeOverlay.AppCompat.ActionBar">
+        <item name="colorControlNormal">@color/white</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.Toolbar.Title" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+</resources>

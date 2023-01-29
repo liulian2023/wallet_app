@@ -1,0 +1,557 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EAF6F6"
+    tools:context=".ui.activity.mine_fragment_activity.CertificationActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <include layout="@layout/toolbar_layout"/>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="179dp"
+            android:src="@drawable/fwsrz_banner"
+            android:scaleType="centerCrop"
+            />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/server_certification_constrainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/white_8radio_rapple"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="22dp"
+                android:text="填写信息"
+                android:textSize="20sp"
+                android:textColor="@color/default_color"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/telegram_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="telegram"
+                android:textSize="15sp"
+                android:textColor="@color/default_color"
+                app:layout_constraintStart_toStartOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+            <EditText
+                android:id="@+id/telegram_etv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:background="@null"
+                android:hint="请输入"
+                android:inputType="textPersonName"
+                android:textColor="@color/default_color"
+                android:textColorHint="#999999"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/telegram_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/telegram_tv"
+                app:layout_constraintTop_toTopOf="@+id/telegram_tv" />
+
+            <TextView
+                android:id="@+id/telegtam_split_tv"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="21dp"
+                android:background="#D8D8D8"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/telegram_tv"
+                app:layout_constraintTop_toBottomOf="@+id/telegram_tv" />
+
+            <TextView
+                android:id="@+id/skype_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="slype"
+                android:visibility="gone"
+                android:textColor="@color/default_color"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/telegtam_split_tv" />
+
+            <EditText
+                android:id="@+id/skype_etv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="请输入"
+                android:visibility="gone"
+                android:inputType="textPersonName"
+                android:textColor="@color/default_color"
+                android:textColorHint="#999999"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="@+id/skype_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/telegram_etv"
+                app:layout_constraintTop_toTopOf="@+id/skype_tv" />
+
+            <TextView
+                android:id="@+id/skype_split_tv"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="21dp"
+                android:background="#D8D8D8"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/telegram_tv"
+                app:layout_constraintTop_toBottomOf="@+id/skype_tv" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:text="商户类型"
+                android:visibility="gone"
+                android:textSize="15sp"
+                android:textColor="@color/default_color"
+                app:layout_constraintStart_toStartOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/skype_split_tv" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/type_constrainLayout"
+                android:layout_width="0dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                app:layout_constraintLeft_toLeftOf="@id/textView9"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView9">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/personal_constrainLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/certification_un_check_shape"
+                    app:layout_constraintHorizontal_chainStyle="spread_inside"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/company_constrainLayout"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="60dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginEnd="60dp"
+                        android:text="个人"
+                        android:textColor="@color/default_color"
+                        android:textSize="15sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="17dp"
+                        android:text="自由接单"
+                        android:textColor="#999999"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/textView11"
+                        app:layout_constraintStart_toStartOf="@+id/textView11"
+                        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+                    <ImageView
+                        android:id="@+id/personal_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/shlx_gx_fwsrz" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/company_constrainLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:background="@drawable/certification_check_shape"
+                    app:layout_constraintStart_toEndOf="@+id/personal_constrainLayout"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.0">
+
+                    <TextView
+                        android:id="@+id/company_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginRight="60dp"
+                        android:text="公司"
+                        android:textColor="@color/default_color"
+                        android:textSize="15sp"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="17dp"
+                        android:maxLength="7"
+                        android:text="副标题"
+                        android:textColor="#999999"
+                        android:textSize="13sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/company_tv"
+                        app:layout_constraintStart_toStartOf="@+id/company_tv"
+                        app:layout_constraintTop_toBottomOf="@+id/company_tv" />
+
+                    <ImageView
+                        android:id="@+id/company_iv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/shlx_gx_fwsrz" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/server_group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:constraint_referenced_ids="textView9,type_constrainLayout"
+                />
+
+            <TextView
+                android:id="@+id/type_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:text="合作类型"
+                android:textColor="@color/default_color"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/textView6"
+                app:layout_constraintTop_toBottomOf="@+id/type_constrainLayout" />
+
+            <TextView
+                android:id="@+id/certification_type_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:text="请选择"
+                android:textColor="#999999"
+                android:textSize="15sp"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/type_tv"
+                app:layout_constraintEnd_toStartOf="@+id/certification_type_iv"
+                app:layout_constraintStart_toStartOf="@+id/telegram_etv"
+                app:layout_constraintTop_toTopOf="@+id/type_tv" />
+
+            <ImageView
+                android:id="@+id/certification_type_iv"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginEnd="14dp"
+                app:layout_constraintBottom_toBottomOf="@+id/certification_type_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/certification_type_tv"
+                app:srcCompat="@drawable/rzlx_qxz_fwsrz" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:text="TextView"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:layout_marginTop="21dp"
+                app:layout_constraintTop_toBottomOf="@id/type_tv"
+                android:background="#D8D8D8"
+                tools:layout_editor_absoluteX="147dp" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:text="入驻简介"
+                android:textSize="15sp"
+                android:textColor="@color/default_color"
+                app:layout_constraintStart_toStartOf="@+id/type_tv"
+                app:layout_constraintTop_toBottomOf="@+id/textView16" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="166dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:orientation="vertical"
+                android:background="@drawable/certification_un_check_shape"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView17">
+                <EditText
+                    android:id="@+id/problem_etv"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="13dp"
+                    android:layout_marginRight="13dp"
+                    android:layout_marginTop="13dp"
+                    android:hint="请简单的描述您想入驻的想法吧～"
+                    android:background="@null"
+                    android:textSize="12sp"
+                    android:inputType="text"
+                    android:imeOptions="actionDone"
+                    android:textColorHint="#999999"
+                    android:textColor="#140000"
+                    android:gravity="top|left"
+                    />
+                <TextView
+                    android:id="@+id/limit_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0/300"
+                    android:layout_marginRight="14dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_gravity="bottom|right"
+                    />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="184dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:src="@drawable/big_bird"
+            android:layout_marginTop="13dp"
+            android:scaleType="centerCrop"
+            />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:visibility="gone"
+            android:background="@drawable/white_8radio_rapple"
+            android:layout_marginTop="13dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp">
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="87dp"
+                android:layout_height="166dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+            <TextView
+                android:id="@+id/reason_one_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="22dp"
+                android:text="联合运营有什么好处？"
+                android:textSize="20sp"
+                android:textColor="@color/default_color"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/reason_two_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="认证信誉商家让您不再为业绩烦恼"
+                android:textColor="#666666"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/reason_one_tv"
+                app:layout_constraintStart_toStartOf="@+id/reason_one_tv"
+                app:layout_constraintTop_toBottomOf="@+id/reason_one_tv" />
+
+            <LinearLayout
+                android:id="@+id/chain_one_linear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/certification_shape"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/chain_two_linear"
+                app:layout_constraintHorizontal_chainStyle="spread_inside"
+                app:layout_constraintStart_toStartOf="@+id/reason_one_tv"
+                app:layout_constraintTop_toBottomOf="@+id/reason_two_tv">
+
+                <TextView
+                    android:id="@+id/chain_one_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="15dp"
+                    android:text="成交快"
+                    android:textColor="#FE5F0E"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/chain_one_remark_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="9dp"
+                    android:gravity="center"
+                    android:text="平台担保\n快速成交"
+                    android:textColor="#666666"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/chain_two_linear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:background="@drawable/certification_shape"
+                android:orientation="vertical"
+                app:layout_constraintStart_toEndOf="@+id/chain_one_linear"
+                app:layout_constraintEnd_toStartOf="@+id/chain_three_linear"
+                app:layout_constraintTop_toBottomOf="@+id/reason_two_tv">
+
+                <TextView
+                    android:id="@+id/chain_two_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="15dp"
+                    android:text="零成本"
+                    android:textColor="#FE5F0E"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/chain_two_remark_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="9dp"
+                    android:gravity="center"
+                    android:text="无需投入\n坐等接单"
+                    android:textColor="#666666"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/chain_three_linear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:layout_marginEnd="81dp"
+                android:background="@drawable/certification_shape"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toStartOf="@+id/imageView7"
+                app:layout_constraintStart_toEndOf="@+id/chain_two_linear"
+                app:layout_constraintTop_toBottomOf="@+id/reason_two_tv">
+
+                <TextView
+                    android:id="@+id/chain_three_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginRight="15dp"
+                    android:text="省时间"
+                    android:textColor="#FE5F0E"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/chain_three_remark_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginBottom="9dp"
+                    android:gravity="center"
+                    android:text="平台筛选\n意向客户"
+                    android:textColor="#666666"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/white_8radio_rapple">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginLeft="15dp"
+                android:textSize="20sp"
+                android:textColor="@color/default_color"
+                android:text="合作问题"
+                />
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/certification_recycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="21dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginBottom="16dp"
+                />
+        </LinearLayout>
+        <Button
+            android:id="@+id/certification_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="23dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="16sp"
+            android:textColor="#332E24"
+            android:text="我已阅读合作问题,确认申请"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/register_btn_selector"
+            />
+        <Button
+            android:id="@+id/certification_btn1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="23dp"
+            android:layout_marginRight="23dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="13sp"
+            android:textColor="#332E24"
+            android:text="我已阅读合作问题,确认申请"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/register_btn_selector"
+            />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,208 @@
+apply plugin: 'com.android.application'
+apply plugin: 'realm-android'
+apply plugin: 'org.greenrobot.greendao'
+
+android {
+
+    signingConfigs {
+        release {
+            keyAlias 'feige'
+            keyPassword 'feige1111'
+            storeFile file('../feige.jks')
+            storePassword 'feige1111'
+        }
+    }
+    compileSdkVersion rootProject.ext.android["compileSdkVersion"]
+    buildToolsVersion rootProject.ext.android["buildToolsVersion"]
+    defaultConfig {
+        applicationId "com.zz.live"
+        minSdkVersion rootProject.ext.android["minSdkVersion"]
+        targetSdkVersion rootProject.ext.android["targetSdkVersion"]
+        versionCode rootProject.ext.android["versionCode"]
+        versionName rootProject.ext.android["versionName"]
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+        flavorDimensions "com.zz.live"
+        //指定app使用架构(腾讯直播只支持armeabi 、 armeabi-v7a 和 arm64-v8a)
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a"/*, "arm64-v8a"*/
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            shrinkResources false
+        }
+    }
+
+    //指定java8版本
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+
+    }
+
+    // 多渠道打包按到
+    productFlavors {
+        miaomi {
+            applicationId "com.app.feige"
+            resValue("string", "app_name", "TestDemo")
+            //彩票视频 彩票相关
+            manifestPlaceholders = [
+                    UMENG_CHANNEL_VALUE: "feige",
+            ]
+            buildConfigField "String", "UM_KEY", "\"614c2dd92a91a03cef513479\""
+            buildConfigField "String", "OFFICIAL_WEBSITE", "\"feige111.com\""
+
+//            buildConfigField "String", "API_HOST1", "\"http://8.210.29.222:8385/zixunWeb/\""//本地
+            buildConfigField "String", "API_HOST1", "\"https://feigecs.zqk616.com/web/\""//正式
+            buildConfigField "String", "API_HOST2", "\"http://cpapi88.gznbang.com/web/ws/\""//cp本地
+//            buildConfigField "String", "API_HOST2", "\"http://cpapi01.ykydxh.com/web/ws/\""//cp正式
+            versionCode 3
+            versionName "1.0.3"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.viewpager2:viewpager2:1.0.0'
+    implementation files('libs\\pinyin4j-2.5.0.jar')
+    implementation 'com.google.android.material:material:1.4.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation "com.android.support:design:24.1.1"
+    implementation  'com.umeng.umsdk:common:9.4.4'// 必选
+    implementation  'com.umeng.umsdk:asms:1.4.1'// 必选
+    implementation 'com.umeng.umsdk:apm:1.4.2' // 错误分析升级为独立SDK，看crash数据请一定集成，可选
+    //-  - --------------------------------------------- 网络请求+数据解析 -------------------------------------------------------------------------
+    implementation project(':rxhttp')
+    implementation rootProject.ext.dependencies["okhttp"]
+    implementation rootProject.ext.dependencies["fastJson"]
+    //Retrofit
+    implementation rootProject.ext.dependencies["retrofit"]
+    implementation rootProject.ext.dependencies["converter-gson"]
+    implementation rootProject.ext.dependencies["adapter-rxjava2"]
+
+    // ------------------------------------------ 项目基础 ------------------------------------------
+    //作用：同RxLifecycle一样，防止内存泄露，无侵入，不需要继承RxActivity / RxFragment。
+    implementation rootProject.ext.dependencies["autodispose"]
+    implementation 'me.yokeyword:eventbus-activity-scope:1.1.0'
+    implementation rootProject.ext.dependencies["eventbus"]
+
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    /*
+    沉浸式状态栏
+     */
+// 基础依赖包，必须要依赖
+    implementation 'com.gyf.immersionbar:immersionbar:3.0.0'
+// fragment快速实现（可选）
+    implementation 'com.gyf.immersionbar:immersionbar-components:3.0.0'
+    implementation 'com.github.tbruyelle:rxpermissions:0.10.2'
+
+//    -----------------------------------------------UI框架 ---------------------------------------
+    //加载框
+    implementation rootProject.ext.dependencies["kprogresshud"]
+
+    //注解框架
+    implementation rootProject.ext.dependencies["butterknife"]
+    //butterknife
+    annotationProcessor rootProject.ext.dependencies["butterknife-compiler"]
+
+
+    //常用动画合集
+    implementation 'com.daimajia.easing:library:2.0@aar'
+    implementation 'com.daimajia.androidanimations:library:2.3@aar'
+    //可自定义tab Indicator宽度的tabLayout(支持tabLayout原有的所有api,基础用法和tablayout一样)
+    implementation 'com.androidkun:XTabLayout:1.1.4'
+
+    //glide 图片加载
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+    //配合glide实现毛玻璃效果
+//    implementation 'jp.wasabeef:glide-transformations:+'
+
+    //gif imageView
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+    //上拉加载,下拉刷新
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0-alpha-24'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0-alpha-24'
+
+    //banner轮播
+    implementation 'com.zhpan.library:bannerview:2.4.3.1'
+    //RecycleView 开源库(空视图 多布局 添加头尾 )
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.2'
+
+
+    //fragmentation  单activity+多fragment 多activity+多fragment()
+    implementation rootProject.ext.dependencies["fragmentationx"]
+    implementation rootProject.ext.dependencies["fragmentationx-core"]
+    implementation rootProject.ext.dependencies["fragmentationx-swipeback"]
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+
+
+
+    //垂直跑马灯
+    implementation 'com.sunfusheng:MarqueeView:1.4.1'
+    //水平跑马灯
+    implementation 'com.dalong:marqueeview:1.0.1'
+
+    //列表侧滑
+    implementation 'com.github.WangcWj:WeSwipe:1.0.2'
+
+
+
+    implementation 'org.jetbrains:annotations:15.0'
+    implementation 'androidx.core:core-ktx:1.6.0'
+/*    implementation "androidx.core:core-ktx:+"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"*/
+    //版本更新
+    implementation 'com.github.MZCretin:AutoUpdateProject:v2.0.4'
+    //下滑选择控件(时间  类别选择(城市没有封装json))
+    implementation 'com.contrarywind:Android-PickerView:4.1.8'
+    //toast
+    implementation 'com.hjq:toast:8.8'
+    //网格pager
+    implementation 'com.github.mtjsoft:GridPager:v3.7.0'
+    //国家选择
+    implementation 'com.github.D10NGYANG:DL10SideBar:1.0.0'
+    // 拼音
+    implementation files('libs/pinyin4j-2.5.0.jar')
+    //热修复
+//    implementation 'com.aliyun.ams:alicloud-android-hotfix:3.2.3'
+    //图片选择/图片预览
+    implementation 'io.github.lucksiege:pictureselector:v2.7.3-rc08'
+    // greenDao
+    implementation 'org.greenrobot:greendao:3.3.0'
+    // 以太坊开发库
+    implementation 'org.web3j:core:4.1.0-android'
+    // bitcoinj
+    implementation 'org.bitcoinj:bitcoinj-core:0.14.7'
+    //解决依赖冲突
+    implementation "com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava"
+    //二维码
+    implementation 'cn.bingoogolapple:bga-qrcode-zxing:1.3.6'
+
+    implementation 'pub.devrel:easypermissions:1.0.1'
+
+    // 圆点Indicator
+    implementation 'com.youth.banner:banner:1.4.10'
+
+}
+repositories {
+    mavenCentral()
+}
+greendao {
+    schemaVersion 1
+}

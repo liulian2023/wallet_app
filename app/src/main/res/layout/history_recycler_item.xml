@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/white_4radio_rapple">
+    <ImageView
+        android:id="@+id/delete_selector_iv"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="12dp"
+        android:layout_gravity="center"
+        />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp">
+
+        <ImageView
+            android:id="@+id/jingxuan_iv"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginLeft="9dp"
+            app:srcCompat="@drawable/x_icon" />
+        <TextView
+            android:id="@+id/two_level_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:gravity="center"
+            android:text="[二级分类]"
+            android:textColor="@color/default_color"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/jingxuan_iv"
+            app:layout_constraintStart_toEndOf="@+id/jingxuan_iv"
+            app:layout_constraintTop_toTopOf="@+id/jingxuan_iv" />
+
+        <TextView
+            android:id="@+id/history_title_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="6dp"
+            android:gravity="left"
+            android:singleLine="true"
+            android:text="标题，标题，它还是个标题!"
+            android:textColor="@color/default_color"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/price_tv"
+            app:layout_constraintStart_toEndOf="@+id/two_level_name_tv"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/history_remark_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginTop="8dp"
+            android:lineSpacingExtra="3dp"
+            android:maxLines="2"
+            android:text="已有竖版PPT内容约20页，需设计美化。重点优化、美化数据图表、案例展示、软件产品展示，增加…"
+            android:textColor="#666666"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/history_title_tv" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/history_child_recycler"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/history_remark_tv"
+            app:layout_constraintStart_toStartOf="@+id/history_remark_tv"
+            app:layout_constraintTop_toBottomOf="@+id/history_remark_tv" />
+
+        <TextView
+            android:id="@+id/textView46"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="#f8f8f8"
+            app:layout_constraintLeft_toLeftOf="@+id/jingxuan_iv"
+            app:layout_constraintRight_toRightOf="@id/price_tv"
+            app:layout_constraintTop_toBottomOf="@+id/history_child_recycler" />
+
+        <TextView
+            android:id="@+id/date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:text="时间"
+            android:textColor="#999999"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/textView46"
+            app:layout_constraintTop_toBottomOf="@+id/textView46" />
+        <TextView
+            android:id="@+id/price_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="9dp"
+            android:text="2000"
+            android:textColor="@color/red"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

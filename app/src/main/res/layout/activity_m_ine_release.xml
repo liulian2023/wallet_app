@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5"
+    tools:context=".ui.activity.mine_fragment_activity.GuaranteeOrderActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/main_color">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/mine_release_toolbar_back_iv"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:src="@drawable/back_black"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp" />
+
+                <TextView
+                    android:id="@+id/mine_release_toolbar_title_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerInParent="true"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="#333333"
+                    android:textSize="17sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/mine_release_toolbar_right_iv"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:padding="3dp"
+                    android:visibility="visible"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="12dp"
+                    android:src="@drawable/arrow_down_black"
+                    />
+
+                <TextView
+                    android:id="@+id/choose_type_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="类型"
+                    app:layout_constraintRight_toLeftOf="@+id/mine_release_toolbar_right_iv"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textColor="@color/default_color"
+                    android:textSize="14sp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+
+
+    </LinearLayout>
+    <com.androidkun.xtablayout.XTabLayout
+        android:id="@+id/mine_release_tab"
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        app:xTabIndicatorColor="#FA6400"
+        app:xTabIndicatorWidth="20dp"
+        app:xTabIndicatorHeight="2dp"
+        android:background="@color/white"
+        app:xTabMode="fixed"
+        app:xTabTextSize="12sp"
+        app:xTabSelectedTextColor="#FA6400"
+        app:xTabTextColor="@color/default_color" />
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/mine_release_viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="8dp"
+        />
+</LinearLayout>

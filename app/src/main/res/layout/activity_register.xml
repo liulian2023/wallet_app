@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".ui.activity.main_tab_activity.RegisterActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/include2"
+            layout="@layout/toolbar_layout" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/operate_constraint_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/server_constraint_layout"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+            app:layout_constraintTop_toBottomOf="@+id/include2">
+
+            <ImageView
+                android:id="@+id/operate_iv"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="11dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wsyy_mrtx"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/operate_top_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="我是雇主"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/operate_iv"
+                app:layout_constraintTop_toTopOf="@+id/operate_iv" />
+
+            <TextView
+                android:id="@+id/operate_bottom_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="11dp"
+                android:text="寻资源委托办事"
+                android:textSize="12sp"
+                android:imeOptions="actionNext"
+                app:layout_constraintBottom_toBottomOf="@+id/operate_iv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/operate_top_tv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/server_constraint_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+            app:layout_constraintStart_toEndOf="@id/operate_constraint_layout"
+            app:layout_constraintTop_toTopOf="@+id/operate_constraint_layout">
+
+            <ImageView
+                android:id="@+id/server_iv"
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginStart="11dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wsfws_mrtx"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/server_top_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="我是服务商"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/server_iv"
+                app:layout_constraintTop_toTopOf="@+id/server_iv" />
+
+            <TextView
+                android:id="@+id/server_bottom_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="11dp"
+                android:text="提供资源办事赚钱"
+                android:textSize="12sp"
+                app:layout_constraintBottom_toBottomOf="@+id/server_iv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/server_top_tv" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="23dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="23dp"
+            android:background="@drawable/white_4_radio_shape"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/operate_constraint_layout">
+
+            <ImageView
+                android:id="@+id/account_iv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/account_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/account_etv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@null"
+                android:hint="请输入账号"
+                android:inputType="textPersonName"
+                android:singleLine="true"
+                android:textColor="@color/default_color"
+                android:textColorHint="#999999"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@+id/account_iv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/account_iv"
+                app:layout_constraintTop_toTopOf="@+id/account_iv" />
+
+            <TextView
+                android:id="@+id/account_spite_tv"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="14dp"
+                android:background="#D8D8D8"
+                android:text="sds"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/account_iv"
+                app:layout_constraintTop_toBottomOf="@+id/account_iv" />
+
+            <ImageView
+                android:id="@+id/password_iv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="14dp"
+                android:src="@drawable/password_icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/account_spite_tv" />
+
+            <EditText
+                android:id="@+id/password_etv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@null"
+                android:hint="请输入密码"
+                android:inputType="textPassword"
+                android:textColor="@color/default_color"
+                android:textColorHint="#999999"
+                android:textSize="14sp"
+                android:singleLine="true"
+                android:imeOptions="actionNext"
+                app:layout_constraintBottom_toBottomOf="@+id/password_iv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/password_iv"
+                app:layout_constraintTop_toTopOf="@+id/password_iv" />
+
+            <TextView
+                android:id="@+id/password_spite_tv"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="14dp"
+                android:background="#D8D8D8"
+                android:text="sds"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/account_iv"
+                app:layout_constraintTop_toBottomOf="@+id/password_iv" />
+
+            <ImageView
+                android:id="@+id/sure_password_iv"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="14dp"
+                android:layout_marginBottom="14dp"
+                android:src="@drawable/password_icon"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/password_spite_tv" />
+
+            <EditText
+                android:id="@+id/sure_password_etv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@null"
+                android:hint="确认密码8-20位"
+                android:inputType="textPassword"
+                android:textColor="@color/default_color"
+                android:textColorHint="#999999"
+                android:textSize="14sp"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                app:layout_constraintBottom_toBottomOf="@+id/sure_password_iv"
+                app:layout_constraintEnd_toStartOf="@id/switch_password_iv"
+                app:layout_constraintStart_toEndOf="@+id/sure_password_iv"
+                app:layout_constraintTop_toTopOf="@+id/sure_password_iv" />
+
+            <ImageView
+                android:id="@+id/switch_password_iv"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginEnd="12dp"
+                android:src="@drawable/eye_close"
+                app:layout_constraintBottom_toBottomOf="@+id/sure_password_iv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/sure_password_iv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <Button
+            android:id="@+id/register_btn"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:text="注册"
+            android:layout_marginTop="14dp"
+            android:textSize="18sp"
+            android:textColor="@color/default_color"
+            android:background="@drawable/register_btn_selector"
+            app:layout_constraintEnd_toEndOf="@+id/constraintLayout"
+            app:layout_constraintStart_toStartOf="@+id/constraintLayout"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+        <ImageView
+            android:id="@+id/bottom_tip_iv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:scaleType="fitXY"
+            app:layout_constraintEnd_toEndOf="@+id/register_btn"
+            app:layout_constraintStart_toStartOf="@+id/register_btn"
+            app:layout_constraintTop_toBottomOf="@+id/register_btn"
+            app:srcCompat="@drawable/regist_bottom_tip_gz" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
